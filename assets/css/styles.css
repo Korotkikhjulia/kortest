@@ -1,0 +1,2340 @@
+body {
+    /* Frame 1 */
+    position: relative;
+    max-width: 1920px;
+    background: #FFFFFF;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+.a1 {
+    text-decoration: none;
+}
+
+.a1:hover p {
+    /* Блог */
+    text-decoration: underline;
+    color: #F58013;
+}
+
+/*Header*/
+/* Бургер по умолчанию скрыт */
+#burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Меню по умолчанию видно */
+#navMenu {
+    display: flex;
+    gap: 20px;
+    z-index: 1001;
+    /* или больше, чем у header */
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    #burger {
+        display: block;
+    }
+
+    #navMenu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+
+        padding: 1em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+    }
+
+    #navMenu.active {
+        display: flex;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1000;
+    background: #FFFFFF;
+}
+
+.myrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.frame5703 {
+    /* Frame 5703 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    margin: 10px auto;
+    max-width: 1156px;
+    height: fit-content;
+    background: #FFFFFF;
+}
+
+.frame5703tum {
+    /* Тюмень */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7D7D7D;
+}
+
+.frame5702 {
+    /* Frame 5702 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 73px;
+    max-width: 1156px;
+    height: fit-content;
+}
+
+.frame5616 {
+    /* Frame 5616 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    max-width: 264px;
+    height: fit-content;
+}
+
+.fabrika {
+    /* Fabrika */
+    max-width: 144px;
+    height: fit-content;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+    color: #282828;
+}
+
+.fabrika5701 {
+    /* Frame 5701 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    max-width: 107px;
+    height: fit-content;
+}
+
+.frame5701otidei {
+    /* От идеи до воплощения */
+
+    max-width: 107px;
+    height: 36px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.73px;
+    color: #969696;
+}
+
+.frame5618 {
+    /* Frame 5618 */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 510px;
+    height: fit-content;
+}
+
+.frame5618text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #282828;
+}
+
+.frame5704 {
+    /* Frame 5704 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    max-width: 236px;
+    height: fit-content;
+}
+
+.group5628 {
+    /* Group 5628 */
+    width: 174px;
+    height: fit-content;
+}
+
+.group5628text {
+    /* +7 (3452) 748-804 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #282828;
+}
+
+.user-circle1 {
+    /* user-circle 1 */
+    width: 42px;
+    height: fit-content;
+}
+
+/*Header*/
+
+/* index */
+
+.main {
+    margin-top: 170px;
+}
+
+.frame5705 {
+    /* Frame 5705 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    max-width: 1920px;
+    width: 100%;
+    height: fit-content;
+    left: calc(50% - 100vw/2 - 5px);
+    bottom: 0px;
+}
+
+.frame5692 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+    isolation: isolate;
+    max-width: 1860px;
+    height: 563px;
+    margin-top: 180px;
+    margin: auto;
+}
+
+.carousel {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    margin: auto 50px;
+    border-radius: 20px;
+    max-width: 1860px;
+    max-height: 563px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+}
+
+.carousel-text {
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.frame5699 {
+    /* Frame 5699 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 80px;
+    width: 1400px;
+    max-width: 1833px;
+    min-height: 2603px;
+
+    margin-top: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+
+    flex-grow: 0;
+
+}
+
+
+.frame5693 {
+    /* Frame 5693 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 80px;
+
+    width: 1168px;
+    height: 70px;
+
+    border: 1px solid #C1C1C1;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5695text {
+    /* Готовые решения */
+
+    width: 369px;
+    height: 68px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 150%;
+    /* identical to box height, or 68px */
+    letter-spacing: -0.011em;
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5694 {
+    /* Frame 5694 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    width: 1170px;
+    height: 483px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame5626 {
+    /* Frame 5626 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    max-width: 270px;
+    height: 483px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5700 {
+    /* Frame 5700 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15px 15px;
+    gap: 21px;
+
+    max-width: 270px;
+    height: 193px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+.frame5700text1 {
+    /* Детская кровать «Bunny» */
+
+    width: 270px;
+    height: 66px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 150%;
+    /* or 33px */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5700text2 {
+    /* 23000 Р. */
+
+    width: 73px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame11 {
+    /* Frame 1 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px 36px;
+    gap: 10px;
+
+    max-width: 160px;
+    height: 50px;
+
+    background: #282828;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+.frame11text {
+    /* В корзину */
+
+    width: 88px;
+    height: 22px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.maskgroup {
+    /* Mask group */
+
+    width: 270px;
+    height: 270px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.maskgroupimg {
+    /* Rectangle 1280 */
+
+
+    width: 270px;
+    height: 270px;
+    left: 0px;
+    top: 0px;
+
+    background: #D9D9D9;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+.frame5698 {
+    /* Frame 5698 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 331px;
+    gap: 10px;
+
+    max-width: 1833px;
+    height: 597px;
+
+    background: #F9F9F9;
+    border-radius: 25px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-top: 80px;
+
+}
+
+.frame5697 {
+    /* Frame 5697 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 140px;
+
+    max-width: 1171px;
+    height: 417px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5447 {
+    /* Frame 5447 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 38px;
+
+    max-width: 463px;
+    height: 390px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+
+.frame5447text1 {
+    /* О компании */
+
+    max-width: 250px;
+    height: 68px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 150%;
+    /* identical to box height, or 68px */
+    text-align: center;
+    letter-spacing: -0.011em;
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5447text2 {
+
+    max-width: 463px;
+    height: 284px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame5446 {
+    /* Frame 5447 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 38px;
+
+    max-width: 463px;
+    height: 390px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.maskgroup2 {
+    /* Mask group */
+
+    max-width: 568px;
+    height: 417px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.maskgroup2img {
+    /* IMG_20221018_221911_562 1 */
+
+
+    max-width: 570px;
+    height: 427px;
+    left: 596px;
+    top: 0px;
+
+    background: url(IMG_20221018_221911_562.png);
+    /* Rectangle 9 */
+
+
+    width: 568px;
+    height: 417px;
+    left: 603px;
+    top: 0px;
+
+    background: #D9D9D9;
+    border-radius: 30px;
+
+}
+
+.frame914 {
+    /* Frame 914 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 75px 96px;
+    gap: 10px;
+
+    max-width: 1180px;
+    height: 495px;
+
+    background: #282828;
+    border-radius: 20px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+
+}
+
+.frame984 {
+    /* Frame 984 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 28px;
+
+    width: 988px;
+    height: 345px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.frame983 {
+    /* Frame 983 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 14px;
+
+    max-width: 505px;
+    min-height: 80px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.frame982 {
+    /* Frame 982 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 17px;
+
+    width: 988px;
+    min-height: 237px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+.frame983text1 {
+    /* Оставьте заявку */
+
+    max-width: 290px;
+    height: 44px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame983text2 {
+    /* Мы свяжемся с вами и расскажем подробнее обо всех видах услуг */
+
+    max-width: 505px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame981 {
+    /* Frame 981 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 988px;
+    min-height: 54px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.frame975 {
+    /* Frame 975 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 31px 16px 20px;
+    gap: 10px;
+
+    max-width: 264px;
+    height: 54px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+
+}
+
+.frame975text {
+    /* Как вас зовут? */
+
+    width: 111px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.7);
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame976 {
+    /* Frame 976 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 31px 16px 20px;
+    gap: 10px;
+
+    max-width: 264px;
+    height: 54px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame976text {
+    /* +7 (_____) _____ ___ ___ */
+
+    width: 213px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.7);
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame977 {
+    /* Frame 977 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 31px 16px 20px;
+    gap: 10px;
+
+    width: 470px;
+    height: 54px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+.frame977text {
+    /* Email */
+
+    width: 40px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.7);
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame978 {
+    /* Frame 978 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 10px;
+
+    max-width: 988px;
+    height: 58px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame978text {
+    /* Сообщение */
+
+    width: 948px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.7);
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
+
+.frame979 {
+    /* Frame 979 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 432px;
+    height: 91px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+.frame974 {
+    /* Frame 974 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 432px;
+    height: 23px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame974text {
+    /* Соглашаюсь с условиями обработки персональных данных */
+
+    width: 399px;
+    height: 19px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame4 {
+    /* Frame 4 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 13px 50px;
+    gap: 10px;
+
+    width: 183px;
+    height: 48px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+
+.frame4text {
+    /* Заказать звонок */
+
+    width: 83px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: auto;
+}
+
+.frame5545 {
+    /* Frame 5545 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 45px;
+
+    max-width: 1170px;
+    height: 632px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+
+}
+
+.frame48095787 {
+    /* Frame 48095787 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 814px;
+
+    max-width: 1170px;
+    height: 68px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame48095786 {
+    /* Frame 48095786 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    max-width: 1170px;
+    height: 419px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame48095787text1 {
+    /* Новости */
+
+    width: 178px;
+    height: 68px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 150%;
+    /* identical to box height, or 68px */
+    text-align: center;
+    letter-spacing: -0.011em;
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame48095787text2 {
+    /* Все статьи > */
+
+    width: 130px;
+    height: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: center;
+    letter-spacing: -0.011em;
+
+    color: #686868;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame48095782 {
+    /* Frame 48095782 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 270px;
+    height: 419px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.maskgroup3 {
+    /* Mask group */
+
+    width: 270px;
+    height: 236px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.maskgroup3img {
+    /* remont-myagkoj-mebeli-svoimi-rukami 1 */
+
+    width: 423.62px;
+    height: 236px;
+    left: -39px;
+    top: 0px;
+
+    background: url(remont-myagkoj-mebeli-svoimi-rukami.jpg);
+
+    /* Rectangle 1302 */
+
+
+    width: 270px;
+    height: 236px;
+    left: 0px;
+    top: 0px;
+
+    background: #A8A8A8;
+    border-radius: 5px;
+
+}
+
+.blog1 {
+    /* блог 1 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 270px;
+    height: 163px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame3 {
+    /* Frame 3 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 268px;
+    height: 163px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame5540 {
+    /* Frame 5540 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 236px;
+    height: 20px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5540text1 {
+    /* 23.09.2022 */
+
+    width: 83px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #A6A6A6;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5540text2 {
+    /* Чтение: 5 минут */
+
+    width: 133px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #A6A6A6;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame3text1 {
+    /* Paris-inspired style? Check! */
+
+    width: 268px;
+    height: 75px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+
+    /* 111111 */
+    color: #111111;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame3text2 {
+    /* You can draw inspiration from the characters of Paris, too. */
+
+    width: 268px;
+    height: 48px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    /* 111111 */
+    color: #111111;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+/* index */
+
+/* footer */
+
+.footer {
+
+
+    background-color: #282828;
+    color: #A4A4A4;
+    padding: 60px 100px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+
+    /* подвал */
+
+    max-width: 1920px;
+    height: 318px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+
+
+}
+
+.footer__content {
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 1920px;
+    margin: 0 auto;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    /* Group 5428 */
+
+
+    max-width: 1920px;
+    height: 318px;
+    left: 0px;
+    top: 0px;
+
+
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+
+    /* пункты футера */
+
+
+    width: 244px;
+    height: 200px;
+
+
+
+}
+
+.footer__title {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    /* Fabrika */
+
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+
+
+    color: #FFFFFF;
+
+
+}
+
+.footer__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-link1 {
+    /* Политика конфиденциальности */
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    /* identical to box height, or 16px */
+    letter-spacing: -0.011em;
+
+    color: #A4A4A4;
+    text-decoration: none;
+
+
+}
+
+.footer__link {
+    color: #A4A4A4;
+    text-decoration: none;
+}
+
+.ww {
+    /* сделано вв */
+
+
+    width: 190.22px;
+    height: 56px;
+    left: 374px;
+    top: 204px;
+
+
+}
+
+.footer__small {
+    font-size: 12px;
+    color: #A4A4A4;
+}
+
+.footer__note {
+    font-size: 12px;
+    color: #A4A4A4;
+    margin-top: 10px;
+
+    /* Свяжитесь с нами удобным способом! */
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* or 21px */
+    text-align: right;
+
+    color: #A4A4A4;
+
+
+}
+
+.footer__socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+
+    /* Frame 5553 */
+
+
+    width: 124px;
+    height: 31px;
+
+
+
+}
+
+.footer__socials img {
+    width: 24px;
+    height: 24px;
+}
+
+.logocolor1 {
+    /* logoColor 1 */
+
+
+    width: 47px;
+    height: 26px;
+
+
+
+}
+
+.footerimg {
+    /* вк */
+
+
+    width: 31px;
+    height: 31px;
+    border-radius: 5px;
+
+
+}
+
+.footer__link2 {
+    color: #A4A4A4;
+    text-decoration: none;
+    /* Fabrika-tyumen@yandex.ru */
+
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+
+}
+
+/* footer */
+
+/* blogone */
+
+.mainblogone {
+    position: relative;
+    margin-top: 200px;
+}
+
+.frame5709 {
+    /* Frame 5709 */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 100px;
+
+
+    max-width: 1920px;
+    height: 1363px;
+    left: 0px;
+    top: 135px;
+
+
+}
+
+.frame5708 {
+    /* Frame 5708 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 80px;
+
+    max-width: 1170px;
+    height: 945px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5707 {
+    /* Frame 5707 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    max-width: 1170px;
+    height: 945px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5706 {
+    /* Frame 5706 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 37px;
+
+    width: 1170px;
+    height: 626px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5679 {
+    /* Frame 5679 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+
+    max-width: 537px;
+    height: 19px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5679text1 {
+    /* Блог */
+
+    width: 35px;
+    height: 17px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-decoration-line: underline;
+
+    /* Darkish-Grayish */
+    color: #7D7D7D;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5679text2 {
+    /* > */
+
+    width: 9px;
+    height: 19px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    /* Darkish-Grayish */
+    color: #7D7D7D;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame5679text3 {
+    /* 8 факторов, определяющих стоимость ремонта мягкой мебели */
+
+    width: 463px;
+    height: 17px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+.maskgroup4 {
+    /* Mask group */
+
+    width: 1170px;
+    height: 470px;
+
+    filter: drop-shadow(0px 4px 11px rgba(240, 240, 240, 0.25));
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.maskgroup4img {
+    /* viza_udevelopment_vulgarnye-2 2 */
+
+    position: absolute;
+    width: 1231px;
+    height: 754px;
+    left: -59px;
+    top: -209px;
+
+    background: url(viza_udevelopment_vulgarnye-2.jpg);
+    /* Rectangle 1368 */
+
+    position: absolute;
+    width: 1170px;
+    height: 470px;
+    left: 0px;
+    top: 56px;
+
+    background: #F9F9F9;
+    border-radius: 25px;
+
+}
+
+.title {
+    /* аннотация и название */
+
+    width: 872px;
+    height: 389px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.titletext1 {
+    /* 5 факторов, определяющих стоимость ремонта мягкой мебели */
+
+
+    width: 836px;
+    height: 136px;
+    left: 0px;
+    top: 40px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 150%;
+    /* or 68px */
+
+    color: #282828;
+
+
+}
+
+.titletext2 {
+
+
+    width: 871px;
+    height: 168px;
+    left: 1px;
+    top: 221px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    color: #282828;
+
+
+}
+
+.frame5540 {
+    /* Frame 5540 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+
+
+    width: 189px;
+    height: 24px;
+
+    top: 0px;
+
+
+}
+
+.frame5540text {
+    /* 23.09.2022 */
+
+    width: 73px;
+    height: 17px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #969696;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame5546 {
+    /* Frame 5546 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+
+    width: 86px;
+    height: 24px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame5546text {
+    /* 5 минут */
+
+    width: 57px;
+    height: 17px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #969696;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+/* blogone */
+
+/* modal */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.mymodal {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-close {
+    text-align: center;
+}
+
+.bodymodal {
+    /* Frame 48095775 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 30px;
+
+    position: relative;
+    width: 522px;
+    height: 522px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+
+
+}
+
+.form-wrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.frame48095777 {
+    /* Frame 48095777 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    width: 422px;
+    height: fit-content;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.frame48095777text {
+    /* Войти */
+
+    width: 367.5px;
+    height: 68px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 150%;
+    /* identical to box height, or 68px */
+    letter-spacing: -0.011em;
+
+    color: #282828;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
+
+.modal-close {
+    /* Vector 1571 */
+
+    width: 24.5px;
+    height: 23.5px;
+
+    border: 1px solid #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame48095775 {
+    /* Frame 48095775 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    width: 422px;
+    min-height: 324px;
+    height: 424px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+}
+
+.frame981 {
+    /* Frame 981 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 422px;
+    height: 272px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
+
+input {
+
+    /* Frame 975 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 31px 16px 20px;
+    gap: 10px;
+
+    max-width: 422px;
+
+
+    background: #F9F9F9;
+    border-radius: 6px;
+    border: 0px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.submit {
+    /* Frame 1 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    min-width: 133px;
+    width: fit-content;
+    height: 50px;
+
+    background: #7D7D7D;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    border: 0px;
+
+}
+
+.submit p {
+    /* Войти */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+    margin: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.frame48095775text {
+    /* У вас еще нет аккаунта? Зарегистрироваться */
+
+    width: 351px;
+    height: 22px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #969696;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.frame974 {
+    /* Frame 974 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+
+    padding: 0px;
+    gap: 10px;
+
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+/* modal */
