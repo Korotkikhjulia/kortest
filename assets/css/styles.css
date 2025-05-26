@@ -49,7 +49,7 @@ a {
         flex-direction: column;
         background: white;
         position: absolute;
-        left: 50px;
+        left: 40%;
 
         padding: 1em;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -73,9 +73,13 @@ a {
 
 .myrow {
     display: flex;
-    flex-direction: row;
+ 
     align-items: center;
-    gap: 5px;
+}
+
+.mybtn{
+    border: 0px;
+    background-color: #ffffff00;
 }
 
 .frame5703 {
@@ -157,7 +161,7 @@ a {
     /* Frame 5618 */
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
     height: fit-content;
 }
@@ -202,6 +206,7 @@ a {
     /* user-circle 1 */
     width: 42px;
     height: fit-content;
+    overflow: hidden;
 }
 
 /*Header*/

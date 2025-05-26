@@ -19,6 +19,7 @@ session_start();
 <body>
     <?php include 'includes/header.php'; ?>
     <main class="main">
+
         <div class="frame5705">
             <div class="frame5692">
                 <div class="carousel">
@@ -191,6 +192,6 @@ session_start();
     </main>
 
     <?php
-    include 'includes/footer.php'; 
+    include 'includes/footer.php';
     ?>
 </body>
