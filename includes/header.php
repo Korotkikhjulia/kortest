@@ -40,7 +40,7 @@ session_start();
                                 <div class="myrow">
                                     <p><?= htmlspecialchars($_SESSION['username']) ?></p>
                                     <form action="logout.php" method="post">
-                                        <button type="submit">Выйти</button>
+                                        <button type="submit" class="mybtn">Выйти</button>
                                     </form>
                                 </div>
                             <?php else: ?>
