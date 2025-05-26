@@ -3,6 +3,8 @@ body {
     position: relative;
     max-width: 1920px;
     background: #FFFFFF;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 a {
@@ -21,7 +23,7 @@ a {
 }
 
 /*Header*/
-/* Бургер по умолчанию скрыт */
+
 #burger {
     display: none;
     font-size: 24px;
@@ -30,16 +32,14 @@ a {
     position: relative;
 }
 
-/* Меню по умолчанию видно */
+
 #navMenu {
     display: flex;
     gap: 20px;
     z-index: 1001;
-    /* или больше, чем у header */
 }
 
-/* Мобильная адаптация */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #burger {
         display: block;
     }
@@ -49,6 +49,7 @@ a {
         flex-direction: column;
         background: white;
         position: absolute;
+        left: 50px;
 
         padding: 1em;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -63,10 +64,11 @@ a {
 .header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 150px;
     z-index: 1000;
     background: #FFFFFF;
+    padding: 0px 5px;
 }
 
 .myrow {
@@ -84,6 +86,7 @@ a {
     gap: 1px;
     margin: 10px auto;
     max-width: 1156px;
+    width: fit-content;
     height: fit-content;
     background: #FFFFFF;
 }
@@ -102,8 +105,8 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 73px;
-    max-width: 1156px;
+    overflow-x: hidden;
+    width: fit-content;
     height: fit-content;
 }
 
@@ -156,7 +159,6 @@ a {
     flex-direction: row;
     align-items: flex-start;
     gap: 30px;
-    max-width: 510px;
     height: fit-content;
 }
 
@@ -207,7 +209,9 @@ a {
 /* index */
 
 .main {
-    margin-top: 170px;
+    margin-top: 7%;
+    width: 100%;
+    height: fit-content;
 }
 
 .frame5705 {
@@ -218,9 +222,8 @@ a {
     padding: 0px;
     gap: 60px;
     max-width: 1920px;
-    width: 100%;
+    margin: auto 20px;
     height: fit-content;
-    left: calc(50% - 100vw/2 - 5px);
     bottom: 0px;
 }
 
@@ -232,6 +235,7 @@ a {
     gap: 10px;
     isolation: isolate;
     max-width: 1860px;
+
     height: 563px;
     margin-top: 180px;
     margin: auto;
@@ -242,7 +246,7 @@ a {
     z-index: 1;
     overflow: hidden;
     width: 100%;
-    margin: auto 50px;
+    margin: auto;
     border-radius: 20px;
     max-width: 1860px;
     max-height: 563px;
@@ -251,39 +255,78 @@ a {
 .carousel-caption {
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;
     color: white;
     display: flex;
+    flex-direction: column;
 }
 
 .carousel-text {
-    margin: auto;
+
     font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+    justify-content: center;
+}
+
+@media(max-width: 1000px) {
+    .carousel-text {
+
+        font-size: 1rem;
+    }
+}
+
+.carouselbtn {
+    margin: auto;
+    font-size: 1.5rem;
+    /* Frame 1 */
+    width: 171px;
+    height: 58px;
+    border: 0px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+@media(max-width: 1000px) {
+    .carouselbtn {
+        margin: auto;
+        font-size: 1rem;
+        /* Frame 1 */
+        width: fit-content;
+        padding: 5px 15px;
+        height: 58px;
+        border: 0px;
+    }
+}
+
+.carousel-item {
+    background-color: #000000;
+}
+
+.carouselimg {
+    opacity: 70%;
 }
 
 .frame5699 {
     /* Frame 5699 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 80px;
-    width: 1400px;
+    gap: 60px;
     max-width: 1833px;
-    min-height: 2603px;
 
-    margin-top: 50px;
+    margin: 150px 20px;
+    height: fit-content;
+    bottom: 0px;
+}
 
-
-    /* Inside auto layout */
-    flex: none;
-
-    flex-grow: 0;
-
+.frame56991 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
 
 
@@ -291,70 +334,54 @@ a {
     /* Frame 5693 */
 
     box-sizing: border-box;
-
-    /* Auto layout */
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     padding: 20px;
     gap: 80px;
-
-    width: 1168px;
+    max-width: 1168px;
+    width: 100%;
+    margin: auto;
     height: 70px;
-
     border: 1px solid #C1C1C1;
     border-radius: 5px;
+}
 
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+@media(max-width: 1000px) {
+    .frame5693 {
+        flex-direction: column;
+    }
 }
 
 .frame5695text {
     /* Готовые решения */
 
     width: 369px;
+    width: 100%;
     height: 68px;
 
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
     font-size: 45px;
-    line-height: 150%;
-    /* identical to box height, or 68px */
-    letter-spacing: -0.011em;
-
     color: #282828;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
 }
 
 .frame5694 {
     /* Frame 5694 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
 
-    width: 1170px;
-    height: 483px;
+    max-width: 1170px;
+    min-height: 483px;
+}
 
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
+@media(max-width: 1200px) {
+    .frame5694 {
+        flex-direction: column;
+    }
 }
 
 .frame5626 {
@@ -535,7 +562,8 @@ a {
     gap: 10px;
 
     max-width: 1833px;
-    height: 597px;
+    min-height: 597px;
+
 
     background: #F9F9F9;
     border-radius: 25px;
@@ -546,6 +574,34 @@ a {
     flex-grow: 0;
     margin-top: 80px;
 
+}
+
+@media (max-width: 1000px) {
+    .frame5698 {
+        /* Frame 5698 */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5px 10px;
+        gap: 10px;
+
+
+        max-width: 1833px;
+        height: fit-content;
+
+        background: #F9F9F9;
+        border-radius: 25px;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin-top: 80px;
+
+    }
 }
 
 .frame5697 {
@@ -559,7 +615,7 @@ a {
     gap: 140px;
 
     max-width: 1171px;
-    height: 417px;
+    min-height: 417px;
 
 
     /* Inside auto layout */
@@ -567,6 +623,30 @@ a {
     order: 0;
     flex-grow: 0;
 
+}
+
+
+@media (max-width: 1000px) {
+    .frame5697 {
+        /* Frame 5697 */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 140px;
+
+        max-width: 1171px;
+        height: fit-content;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
 }
 
 .frame5447 {
@@ -580,7 +660,7 @@ a {
     gap: 38px;
 
     max-width: 463px;
-    height: 390px;
+    min-height: 390px;
 
 
     /* Inside auto layout */
@@ -595,7 +675,7 @@ a {
     /* О компании */
 
     max-width: 250px;
-    height: 68px;
+    min-height: 68px;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -619,7 +699,8 @@ a {
 .frame5447text2 {
 
     max-width: 463px;
-    height: 284px;
+    width: 100%;
+    min-height: 284px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -649,7 +730,7 @@ a {
     gap: 38px;
 
     max-width: 463px;
-    height: 390px;
+    min-height: 390px;
 
 
     /* Inside auto layout */
@@ -663,7 +744,8 @@ a {
     /* Mask group */
 
     max-width: 568px;
-    height: 417px;
+    min-height: 417px;
+    width: 100%;
 
 
     /* Inside auto layout */
@@ -677,8 +759,8 @@ a {
     /* IMG_20221018_221911_562 1 */
 
 
-    max-width: 570px;
-    height: 427px;
+    max-width: 100%;
+
     left: 596px;
     top: 0px;
 
@@ -686,8 +768,7 @@ a {
     /* Rectangle 9 */
 
 
-    width: 568px;
-    height: 417px;
+
     left: 603px;
     top: 0px;
 
@@ -707,7 +788,7 @@ a {
     gap: 10px;
 
     max-width: 1180px;
-    height: 495px;
+    min-height: 495px;
 
     background: #282828;
     border-radius: 20px;
@@ -716,6 +797,7 @@ a {
     flex: none;
     order: 3;
     flex-grow: 0;
+    margin: auto;
 
 }
 
@@ -730,7 +812,7 @@ a {
     gap: 28px;
 
     width: 988px;
-    height: 345px;
+    min-height: 345px;
 
 
     /* Inside auto layout */
@@ -739,6 +821,30 @@ a {
     flex-grow: 0;
 
 
+}
+
+@media (max-width: 1000px) {
+    .frame984 {
+        /* Frame 984 */
+    
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 28px;
+    
+        width: 100%;
+        min-height: 345px;
+    
+    
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    
+    
+    }
 }
 
 .frame983 {
@@ -773,16 +879,25 @@ a {
     padding: 0px;
     gap: 17px;
 
-    width: 988px;
+    max-width: 988px;
     min-height: 237px;
+}
 
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-
+@media (max-width: 1000px) {
+    .frame982 {
+        /* Frame 982 */
+    
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 17px;
+    
+        max-width: 988px;
+        min-height: 237px;
+        width: 100%;
+    }
 }
 
 .frame983text1 {
@@ -830,6 +945,8 @@ a {
     order: 1;
     flex-grow: 0;
 
+    margin-top: 5px;
+
 }
 
 .frame981 {
@@ -837,21 +954,47 @@ a {
 
     /* Auto layout */
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
 
     width: 988px;
     min-height: 54px;
+    height: 100%;
+}
 
 
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+@media (max-width: 1000px) {
+    .frame981 {
+        /* Frame 981 */
+    
+        /* Auto layout */
+        display: flex;
+        flex-direction: column!important;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 20px;
+    
+        width: 100%;
+        min-height: 54px;
+        height: 100%;
+    }
+}
 
+.frame9811{
+        /* Frame 981 */
 
+    /* Auto layout */
+    display: flex;
+    flex-direction: column!important;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 988px;
+    min-height: 54px;
+    height: 100%;
 }
 
 .frame975 {
@@ -958,7 +1101,8 @@ a {
     padding: 16px 31px 16px 20px;
     gap: 10px;
 
-    width: 470px;
+    max-width: 470px;
+    width: 53%;
     height: 54px;
 
     background: rgba(255, 255, 255, 0.1);
@@ -1006,6 +1150,7 @@ a {
 
     max-width: 988px;
     height: 58px;
+    width: 100%;
 
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
@@ -1021,7 +1166,7 @@ a {
 .frame978text {
     /* Сообщение */
 
-    width: 948px;
+    max-width: 948px;
     height: 22px;
 
     font-family: 'Manrope';
@@ -1051,8 +1196,8 @@ a {
     padding: 0px;
     gap: 20px;
 
-    width: 432px;
-    height: 91px;
+    max-width: 432px;
+    min-height: 91px;
 
 
     /* Inside auto layout */
@@ -1073,22 +1218,17 @@ a {
     padding: 0px;
     gap: 10px;
 
-    width: 432px;
-    height: 23px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    max-width: 432px;
+    min-height: 23px;
+    width: 100%;
 
 }
 
 .frame974text {
     /* Соглашаюсь с условиями обработки персональных данных */
 
-    width: 399px;
-    height: 19px;
+    max-width: 399px;
+    min-height: 19px;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -1168,13 +1308,14 @@ a {
     gap: 45px;
 
     max-width: 1170px;
-    height: 632px;
+    min-height: 632px;
 
 
     /* Inside auto layout */
     flex: none;
     order: 4;
     flex-grow: 0;
+    margin: 50px auto;
 
 }
 
@@ -1187,17 +1328,13 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 814px;
 
     max-width: 1170px;
-    height: 68px;
+    min-height: 68px;
+    width: 100%;
 
 
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+ 
 
 }
 
@@ -1212,21 +1349,35 @@ a {
     gap: 30px;
 
     max-width: 1170px;
-    height: 419px;
+    min-height: 419px;    
+    margin: auto;
 
 
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+}
 
+@media (max-width: 1000px) {
+    .frame48095786 {
+        /* Frame 48095786 */
+    
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 30px;
+    
+        max-width: 1170px;
+        min-height: 419px;    
+        margin: auto;
+    
+    
+    }
 }
 
 .frame48095787text1 {
     /* Новости */
 
-    width: 178px;
+    max-width: 178px;
     height: 68px;
 
     font-family: 'Manrope';
@@ -1283,8 +1434,8 @@ a {
     padding: 0px;
     gap: 20px;
 
-    width: 270px;
-    height: 419px;
+    max-width: 270px;
+    min-height: 419px;
 
 
     /* Inside auto layout */
@@ -1508,7 +1659,7 @@ a {
     /* подвал */
 
     max-width: 1920px;
-    height: 318px;
+    min-height: 318px;
 
 
     /* Inside auto layout */
@@ -1533,7 +1684,7 @@ a {
 
 
     max-width: 1920px;
-    height: 318px;
+    min-height: 318px;
     left: 0px;
     top: 0px;
 
@@ -1550,7 +1701,7 @@ a {
 
 
     width: 244px;
-    height: 200px;
+    min-height: 200px;
 
 
 
@@ -1708,7 +1859,9 @@ a {
 
 .mainblogone {
     position: relative;
-    margin-top: 200px;
+    margin: 7% auto;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 .frame5709 {
@@ -1717,16 +1870,19 @@ a {
     /* Auto layout */
 
     display: flex;
-    flex-direction: column;
+ 
     align-items: center;
     padding: 0px;
     gap: 100px;
+    width: fit-content;
 
 
     max-width: 1920px;
-    height: 1363px;
+    min-height: 1363px;
     left: 0px;
     top: 135px;
+    margin: auto;
+ 
 
 
 }
@@ -1742,13 +1898,14 @@ a {
     gap: 80px;
 
     max-width: 1170px;
-    height: 945px;
+    min-height: 945px;
 
 
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
+    width: 100%;
 
 }
 
@@ -1763,13 +1920,14 @@ a {
     gap: 30px;
 
     max-width: 1170px;
-    height: 945px;
+    min-height: 945px;
 
 
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
+    width: 100%;
 
 }
 
@@ -1783,8 +1941,9 @@ a {
     padding: 0px;
     gap: 37px;
 
-    width: 1170px;
-    height: 626px;
+    max-width: 1170px;
+    min-height: 626px;
+    width: 100%;
 
 
     /* Inside auto layout */
@@ -1803,9 +1962,10 @@ a {
     align-items: center;
     padding: 0px;
     gap: 15px;
+    width: 100%;
 
     max-width: 537px;
-    height: 19px;
+    min-height: 19px;
 
 
     /* Inside auto layout */
@@ -1818,7 +1978,7 @@ a {
 .frame5679text1 {
     /* Блог */
 
-    width: 35px;
+    max-width: 35px;
     height: 17px;
 
     font-family: 'Montserrat';
@@ -1866,8 +2026,9 @@ a {
 .frame5679text3 {
     /* 8 факторов, определяющих стоимость ремонта мягкой мебели */
 
-    width: 463px;
-    height: 17px;
+    max-width: 463px;
+    min-height: 17px;
+    width: 100vw;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -1886,11 +2047,13 @@ a {
 
 }
 
+
 .maskgroup4 {
     /* Mask group */
 
-    width: 1170px;
-    height: 470px;
+    max-width: 1170px;
+    min-height: 470px;
+    width: 100%;
 
     filter: drop-shadow(0px 4px 11px rgba(240, 240, 240, 0.25));
 
@@ -1905,18 +2068,18 @@ a {
     /* viza_udevelopment_vulgarnye-2 2 */
 
     position: absolute;
-    width: 1231px;
-    height: 754px;
-    left: -59px;
+    max-width: 1170px;
+    width: 100%;
+ 
+ 
     top: -209px;
 
     background: url(viza_udevelopment_vulgarnye-2.jpg);
     /* Rectangle 1368 */
 
     position: absolute;
-    width: 1170px;
-    height: 470px;
-    left: 0px;
+ 
+ 
     top: 56px;
 
     background: #F9F9F9;
@@ -1927,8 +2090,9 @@ a {
 .title {
     /* аннотация и название */
 
-    width: 872px;
-    height: 389px;
+    max-width: 872px;
+    min-height: 389px;
+    width: 100%;
 
 
     /* Inside auto layout */
@@ -1942,10 +2106,11 @@ a {
     /* 5 факторов, определяющих стоимость ремонта мягкой мебели */
 
 
-    width: 836px;
-    height: 136px;
+    max-width: 836px;
+    min-height: 136px;
     left: 0px;
     top: 40px;
+    width: 100%;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -1962,8 +2127,8 @@ a {
 .titletext2 {
 
 
-    width: 871px;
-    height: 168px;
+    max-width: 871px;
+    min-height: 168px;
     left: 1px;
     top: 221px;
 
@@ -2090,6 +2255,8 @@ a {
 
 .modal-close {
     text-align: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .bodymodal {
@@ -2117,6 +2284,7 @@ a {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
 }
 
 .frame48095777 {
@@ -2192,7 +2360,7 @@ a {
 
     width: 422px;
     min-height: 324px;
-    height: 424px;
+    height: fit-content;
 
 
     /* Inside auto layout */
@@ -2201,28 +2369,7 @@ a {
     flex-grow: 1;
 
 }
-
-.frame981 {
-    /* Frame 981 */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 20px;
-
-    width: 422px;
-    height: 272px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-
-}
+ 
 
 input {
 
@@ -2236,6 +2383,7 @@ input {
     gap: 10px;
 
     max-width: 422px;
+    height: fit-content;
 
 
     background: #F9F9F9;

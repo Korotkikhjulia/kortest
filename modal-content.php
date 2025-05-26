@@ -12,12 +12,12 @@
         <div id="login-form">
             <div class="frame48095777">
                 <h2 class="frame48095777text">Войти</h2>
-                <button class="modal-close" type="button"><p>&times;</p></button>
+                <button class="modal-close" type="button"> &times; </button>
             </div>
             <div class="frame48095775">
-                <form action="login.php" method="POST" class="frame981">
-                    <input type="text" name="username" placeholder="Логин" required />
-                    <input type="password" name="password" placeholder="Пароль" required />
+                <form action="login.php" method="POST" class="frame9811">
+                    <input type="text" class="in" name="username" placeholder="Логин" required />
+                    <input type="password"  class="in" name="password" placeholder="Пароль" required />
                     <button type="submit" class="submit">
                         <p>Войти</p>
                     </button>
@@ -32,11 +32,11 @@
                 <button class="modal-close" type="button">&times;</button>
             </div>
             <div class="frame48095775">
-                <form id="regForm" action="register.php" class="frame981" method="POST" onsubmit="return validateRegister()">
-                    <input type="text" name="username" placeholder="Имя" required />
-                    <input type="text" name="user" placeholder="Фамилия" required />
-                    <input type="text" name="phone" placeholder="Телефон" required />
-                    <input type="password" name="password" placeholder="Пароль" required />
+                <form id="regForm" action="register.php" class="frame9811" method="POST" onsubmit="return validateRegister()">
+                    <input type="text"  class="in" name="username" placeholder="Имя" required />
+                    <input type="text"  class="in" name="user" placeholder="Фамилия" required />
+                    <input type="text"  class="in" name="phone" placeholder="Телефон" required />
+                    <input type="password"  class="in" name="password" placeholder="Пароль" required />
                     <div class="frame974"><input type="checkbox" name="terms" required />
                         <p>Соглашаюсь с условиями обработки
                             персональных данных</p>

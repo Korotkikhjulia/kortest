@@ -25,7 +25,10 @@ if (!$newsItem) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($newsItem['title']) ?></title>
     <link rel="stylesheet" href="/assets/css/styles.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/css/styles.css') ?>">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/css/bootstrap.min.css') ?>">
     <script src="/assets/js/main.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/main.js') ?>"></script>
+    <script src="/assets/js/search.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/search.js') ?>"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/bootstrap.bundle.min.js') ?>"></script>
 </head>
 <body>
 <?php include 'includes/header.php'; ?>
