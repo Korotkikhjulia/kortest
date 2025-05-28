@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute(['username' => $username, 'user' => $user]);
 
     if ($stmt->fetch()) {
-        header("Location: index.php?error=1");
+        header("Location: index.php?error=2");
         exit;
     }
 

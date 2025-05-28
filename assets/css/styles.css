@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Italic */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Manrope */
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     /* Frame 1 */
     position: relative;
@@ -39,7 +77,7 @@ a {
     z-index: 1001;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     #burger {
         display: block;
     }
@@ -49,8 +87,8 @@ a {
         flex-direction: column;
         background: white;
         position: absolute;
-        left: 40%;
-
+        left: 50%;
+        transform: translateX(-50%);
         padding: 1em;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         z-index: 2000;
@@ -102,6 +140,13 @@ a {
     font-size: 14px;
     line-height: 17px;
     color: #7D7D7D;
+}
+
+@media(max-width: 992px) {
+    .frame5703tum {
+        /* Тюмень */
+        display: none !important;
+    }
 }
 
 .frame5702 {
@@ -164,6 +209,8 @@ a {
     align-items: center;
     gap: 30px;
     height: fit-content;
+    width: fit-content;
+
 }
 
 .frame5618text {
@@ -214,9 +261,10 @@ a {
 /* index */
 
 .main {
-    margin-top: 7%;
+    margin-top: 20vh;
     width: 100%;
     height: fit-content;
+    padding: 25px;
 }
 
 .frame5705 {
@@ -254,7 +302,8 @@ a {
     margin: auto;
     border-radius: 20px;
     max-width: 1860px;
-    max-height: 563px;
+    height: 100%;
+    min-height: 400px !important;
 }
 
 .carousel-caption {
@@ -266,7 +315,6 @@ a {
 }
 
 .carousel-text {
-
     font-size: 2rem;
     font-weight: bold;
     display: flex;
@@ -275,10 +323,14 @@ a {
     justify-content: center;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 576px) {
     .carousel-text {
-
-        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        align-items: flex-end;
+        height: 30%;
+        justify-content: center;
+        font-size: 1.5rem;
     }
 }
 
@@ -294,7 +346,7 @@ a {
     border-radius: 5px;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 576px) {
     .carouselbtn {
         margin: auto;
         font-size: 1rem;
@@ -308,11 +360,52 @@ a {
 
 .carousel-item {
     background-color: #000000;
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
 }
 
 .carouselimg {
-    opacity: 70%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* обрезка по контейнеру */
+    opacity: 0.7;
+    display: block;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border: 2px solid white !important;
+    border-radius: 50% !important;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: auto !important;
+        bottom: 20px !important;
+        transform: none !important;
+        width: 15%;
+        height: 40px;
+    }
+
+    .carousel-control-prev {
+        left: 10px !important;
+    }
+
+    .carousel-control-next {
+        right: 10px !important;
+    }
+
+    .frame5699 {
+        gap: 60px;
+    }
+}
+
 
 .frame5699 {
     /* Frame 5699 */
@@ -323,7 +416,7 @@ a {
     gap: 60px;
     max-width: 1833px;
 
-    margin: 150px 20px;
+    margin: 60px 20px;
     height: fit-content;
     bottom: 0px;
 }
@@ -332,6 +425,12 @@ a {
     display: flex;
     flex-direction: column;
     width: 70%;
+}
+
+@media(max-width:992px) {
+    .frame56991 {
+        width: 90%;
+    }
 }
 
 
@@ -351,7 +450,7 @@ a {
     border-radius: 5px;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 576px) {
     .frame5693 {
         flex-direction: column;
     }
@@ -360,9 +459,9 @@ a {
 .frame5695text {
     /* Готовые решения */
 
-    width: 369px;
+
     width: 100%;
-    height: 68px;
+    min-height: 68px;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -374,19 +473,13 @@ a {
 .frame5694 {
     /* Frame 5694 */
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding: 0px;
-    gap: 30px;
+    gap: 25px;
 
     max-width: 1170px;
     min-height: 483px;
-}
-
-@media(max-width: 1200px) {
-    .frame5694 {
-        flex-direction: column;
-    }
 }
 
 .frame5626 {
@@ -398,9 +491,7 @@ a {
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
-
-    max-width: 270px;
-    height: 483px;
+    height: fit-content;
 
     background: #FFFFFF;
     border-radius: 10px;
@@ -421,9 +512,7 @@ a {
     align-items: flex-start;
     padding: 0px 15px 15px;
     gap: 21px;
-
-    max-width: 270px;
-    height: 193px;
+    height: fit-content;
 
 
     /* Inside auto layout */
@@ -436,20 +525,15 @@ a {
 
 .frame5700text1 {
     /* Детская кровать «Bunny» */
-
-    width: 270px;
-    height: 66px;
-
+    min-height: 66px;
+    width: fit-content;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 150%;
     /* or 33px */
-
     color: #000000;
-
-
     /* Inside auto layout */
     flex: none;
     order: 0;
@@ -459,9 +543,7 @@ a {
 
 .frame5700text2 {
     /* 23000 Р. */
-
-    width: 73px;
-    height: 20px;
+    min-height: 20px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -487,7 +569,9 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 14px 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15%;
     gap: 10px;
 
     max-width: 160px;
@@ -506,8 +590,8 @@ a {
 .frame11text {
     /* В корзину */
 
-    width: 88px;
-    height: 22px;
+    max-width: 88px;
+    max-height: 22px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -517,13 +601,18 @@ a {
     /* identical to box height */
 
     color: #FFFFFF;
-
+    margin: auto;
 
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
+}
 
+@media(max-width:576px) {
+    .frame11text {
+        font-size: 14px;
+    }
 }
 
 .maskgroup {
@@ -555,6 +644,45 @@ a {
 
 }
 
+@media (max-width: 768px) {
+    .frame5626 {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .maskgroup,
+    .maskgroupimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .frame5700 {
+        padding: 10px;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .frame5700text1 {
+        font-size: 18px;
+        line-height: 130%;
+        height: auto;
+    }
+
+    .frame5700text2 {
+        font-size: 14px;
+    }
+
+    .frame11text {
+        font-size: 16px;
+    }
+
+    .frame5694 {
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+
 .frame5698 {
     /* Frame 5698 */
 
@@ -563,25 +691,17 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 90px 331px;
     gap: 10px;
-
     max-width: 1833px;
     min-height: 597px;
-
-
+    width: 95vw;
     background: #F9F9F9;
     border-radius: 25px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    margin-top: 80px;
+    margin: 80px auto;
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     .frame5698 {
         /* Frame 5698 */
 
@@ -610,28 +730,19 @@ a {
 }
 
 .frame5697 {
-    /* Frame 5697 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
-    gap: 140px;
+    justify-content: space-between;
 
-    max-width: 1171px;
-    min-height: 417px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+    max-width: 1170px;
+    width: 90%;
+    height: 50%;
+    margin: auto;
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     .frame5697 {
         /* Frame 5697 */
 
@@ -639,11 +750,32 @@ a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 0px;
-        gap: 140px;
+        padding: 15px;
 
         max-width: 1171px;
         height: fit-content;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .frame5447 {
+        /* Frame 5447 */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 15px !important;
+
+        max-width: 463px;
+        min-height: 390px;
+        width: 100%;
 
 
         /* Inside auto layout */
@@ -663,10 +795,11 @@ a {
     align-items: flex-start;
     padding: 0px;
     gap: 38px;
-
+    width: 100%;
     max-width: 463px;
     min-height: 390px;
-
+    padding-right: 25px;
+    margin: auto;
 
     /* Inside auto layout */
     flex: none;
@@ -747,39 +880,23 @@ a {
 
 .maskgroup2 {
     /* Mask group */
-
     max-width: 568px;
-    min-height: 417px;
     width: 100%;
-
-
     /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
+ 
+    margin: auto;
 }
 
 .maskgroup2img {
     /* IMG_20221018_221911_562 1 */
-
-
     max-width: 100%;
-
-    left: 596px;
     top: 0px;
-
-    background: url(IMG_20221018_221911_562.png);
     /* Rectangle 9 */
-
-
-
-    left: 603px;
-    top: 0px;
-
+    width: 100%;
+    height: auto;
     background: #D9D9D9;
     border-radius: 30px;
-
+    display: block;
 }
 
 .frame914 {
@@ -802,7 +919,7 @@ a {
     flex: none;
     order: 3;
     flex-grow: 0;
-    margin: auto;
+    margin: 60px auto;
 
 }
 
@@ -814,21 +931,18 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 28px;
-
-    width: 988px;
+    gap: 17px;
+    max-width: 988px;
+    width: 100%;
     min-height: 345px;
-
-
     /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
-
-
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+
     .frame984 {
         /* Frame 984 */
 
@@ -837,7 +951,7 @@ a {
         flex-direction: column;
         align-items: flex-start;
         padding: 0px;
-        gap: 28px;
+        gap: 17px;
 
         width: 100%;
         min-height: 345px;
@@ -883,12 +997,12 @@ a {
     align-items: flex-start;
     padding: 0px;
     gap: 17px;
-
+    width: 100%;
     max-width: 988px;
     min-height: 237px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .frame982 {
         /* Frame 982 */
 
@@ -909,7 +1023,7 @@ a {
     /* Оставьте заявку */
 
     max-width: 290px;
-    height: 44px;
+    min-height: 44px;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -933,7 +1047,6 @@ a {
     /* Мы свяжемся с вами и расскажем подробнее обо всех видах услуг */
 
     max-width: 505px;
-    height: 22px;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -941,49 +1054,57 @@ a {
     font-size: 16px;
     line-height: 22px;
     /* identical to box height */
-
     color: #FFFFFF;
-
-
     /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
-
-    margin-top: 5px;
-
+    margin-bottom: 0;
 }
 
 .frame981 {
     /* Frame 981 */
 
     /* Auto layout */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
     flex-direction: row !important;
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
 
-    width: 988px;
+    max-width: 988px;
+    width: 100%;
     min-height: 54px;
     height: 100%;
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .frame981 {
         /* Frame 981 */
 
         /* Auto layout */
         display: flex;
         flex-direction: column !important;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 20px;
 
         width: 100%;
-        min-height: 54px;
-        height: 100%;
+    }
+
+    .frame975 {
+        /* Frame 975 */
+        max-width: 100% !important;
+    }
+
+    .frame976 {
+        /* Frame 976 */
+        max-width: 100% !important;
+
+    }
+
+    .frame977 {
+        /* Frame 977 */
+        max-width: 100% !important;
     }
 }
 
@@ -997,7 +1118,8 @@ a {
     padding: 0px;
     gap: 20px;
 
-    width: 988px;
+    max-width: 988px;
+    width: 100%;
     min-height: 54px;
     height: 100%;
 }
@@ -1011,7 +1133,7 @@ a {
     align-items: flex-start;
     padding: 16px 31px 16px 20px;
     gap: 10px;
-
+    color: white;
     max-width: 264px;
     height: 54px;
 
@@ -1022,32 +1144,6 @@ a {
     flex: none;
     order: 0;
     flex-grow: 0;
-
-
-
-}
-
-.frame975text {
-    /* Как вас зовут? */
-
-    width: 111px;
-    height: 22px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
-
-    color: rgba(255, 255, 255, 0.7);
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
 }
 
 .frame976 {
@@ -1059,7 +1155,7 @@ a {
     align-items: flex-start;
     padding: 16px 31px 16px 20px;
     gap: 10px;
-
+    color: white;
     max-width: 264px;
     height: 54px;
 
@@ -1073,29 +1169,6 @@ a {
 
 }
 
-.frame976text {
-    /* +7 (_____) _____ ___ ___ */
-
-    width: 213px;
-    height: 22px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
-
-    color: rgba(255, 255, 255, 0.7);
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
 .frame977 {
     /* Frame 977 */
 
@@ -1105,9 +1178,9 @@ a {
     align-items: flex-start;
     padding: 16px 31px 16px 20px;
     gap: 10px;
-
+    color: white;
     max-width: 470px;
-    width: 53%;
+    width: 100%;
     height: 54px;
 
     background: rgba(255, 255, 255, 0.1);
@@ -1116,29 +1189,6 @@ a {
     /* Inside auto layout */
     flex: none;
     order: 2;
-    flex-grow: 0;
-
-}
-
-.frame977text {
-    /* Email */
-
-    width: 40px;
-    height: 22px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
-
-    color: rgba(255, 255, 255, 0.7);
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
     flex-grow: 0;
 
 }
@@ -1152,7 +1202,7 @@ a {
     align-items: flex-start;
     padding: 18px 20px;
     gap: 10px;
-
+    color: white;
     max-width: 988px;
     height: 58px;
     width: 100%;
@@ -1168,29 +1218,6 @@ a {
 
 }
 
-.frame978text {
-    /* Сообщение */
-
-    max-width: 948px;
-    height: 22px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
-
-    color: rgba(255, 255, 255, 0.7);
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-
-}
-
 .frame979 {
     /* Frame 979 */
 
@@ -1199,56 +1226,131 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 20px;
-
-    max-width: 432px;
+    gap: 17px;
     min-height: 91px;
-
-
     /* Inside auto layout */
     flex: none;
     order: 2;
     flex-grow: 0;
-
 }
 
 .frame974 {
+
     /* Frame 974 */
 
     /* Auto layout */
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+
     padding: 0px;
     gap: 10px;
 
-    max-width: 432px;
     min-height: 23px;
     width: 100%;
 
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
-.frame974text {
-    /* Соглашаюсь с условиями обработки персональных данных */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 17px;
+    user-select: none;
 
-    max-width: 399px;
-    min-height: 19px;
+}
 
+.custom-checkbox2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 17px;
+    user-select: none;
+
+}
+
+.custom-checkbox input {
+    display: none !important;
+}
+
+.custom-checkbox2 input {
+    display: none !important;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #FFFFFF !important;
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.checkmark2 {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #000000 !important;
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox2 input:checked+.checkmark2::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox:hover .checkmark {
+    border-color: #CCCCCC;
+}
+
+.custom-checkbox2:hover .checkmark2 {
+    border-color: #3d3d3d;
+}
+
+.checkbox-text {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-
     color: #FFFFFF;
+}
 
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
+.checkbox-text2 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    max-width: 300px;
 }
 
 .frame4 {
@@ -1262,21 +1364,21 @@ a {
     align-items: flex-start;
     padding: 13px 50px;
     gap: 10px;
-
     width: 183px;
     height: 48px;
-
-    border: 1px solid #FFFFFF;
+    border: 1px solid #FFFFFF !important;
     border-radius: 6px;
-
+    background-color: #00000000;
     /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
-
-
 }
 
+.btncolor:hover {
+    background-color: #F58013;
+    border: 0px;
+}
 
 .frame4text {
     /* Заказать звонок */
@@ -1315,7 +1417,6 @@ a {
     max-width: 1170px;
     min-height: 632px;
 
-
     /* Inside auto layout */
     flex: none;
     order: 4;
@@ -1337,46 +1438,25 @@ a {
     max-width: 1170px;
     min-height: 68px;
     width: 100%;
-
-
-
-
 }
 
 .frame48095786 {
-    /* Frame 48095786 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: flex-start;
-    padding: 0px;
     gap: 30px;
 
     max-width: 1170px;
-    min-height: 419px;
-    margin: auto;
-
-
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
 }
 
-@media (max-width: 1000px) {
-    .frame48095786 {
-        /* Frame 48095786 */
-
-        /* Auto layout */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 30px;
-
-        max-width: 1170px;
-        min-height: 419px;
-        margin: auto;
-
-
-    }
+.frame48095782 {
+    flex: 0 0 270px;
+    min-height: 419px;
 }
 
 .frame48095787text1 {
@@ -1401,7 +1481,6 @@ a {
     flex: none;
     order: 0;
     flex-grow: 0;
-
 }
 
 .frame48095787text2 {
@@ -1426,7 +1505,6 @@ a {
     flex: none;
     order: 1;
     flex-grow: 0;
-
 }
 
 .frame48095782 {
@@ -1447,7 +1525,6 @@ a {
     flex: none;
     order: 0;
     flex-grow: 0;
-
 }
 
 .maskgroup3 {
@@ -1461,7 +1538,6 @@ a {
     flex: none;
     order: 0;
     flex-grow: 0;
-
 }
 
 .maskgroup3img {
@@ -1475,8 +1551,6 @@ a {
     background: url(remont-myagkoj-mebeli-svoimi-rukami.jpg);
 
     /* Rectangle 1302 */
-
-
     width: 270px;
     height: 236px;
     left: 0px;
@@ -1484,7 +1558,6 @@ a {
 
     background: #A8A8A8;
     border-radius: 5px;
-
 }
 
 .blog1 {
@@ -1643,7 +1716,6 @@ a {
     order: 2;
     align-self: stretch;
     flex-grow: 0;
-
 }
 
 
@@ -1652,48 +1724,128 @@ a {
 /* footer */
 
 .footer {
-
-
     background-color: #282828;
     color: #A4A4A4;
     padding: 60px 100px;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     line-height: 150%;
-
     /* подвал */
-
     max-width: 1920px;
     min-height: 318px;
-
-
     /* Inside auto layout */
     flex: none;
     order: 2;
     flex-grow: 0;
-
-
-
 }
 
 .footer__content {
-
     display: flex;
     justify-content: space-between;
     max-width: 1920px;
     margin: 0 auto;
     gap: 60px;
     flex-wrap: wrap;
-
     /* Group 5428 */
-
-
     max-width: 1920px;
     min-height: 318px;
     left: 0px;
     top: 0px;
+}
 
+.fabr {
+    height: fit-content;
+}
 
+.footer__soc {
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+}
+
+@media (max-width: 768px) {
+    .fabr {
+        order: 4;
+    }
+
+    .katalog {
+        order: 2;
+    }
+
+    .company {
+        order: 3;
+    }
+
+    .contacts {
+        order: 1;
+        text-align: start !important;
+    }
+
+    .footer__socials {
+        justify-content: start !important;
+    }
+
+    .footer__title1 {
+        display: none;
+    }
+
+    .footer__title2 {
+        display: block !important;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 0px;
+        /* Fabrika */
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 41px;
+        color: #FFFFFF;
+        margin-bottom: 20px !important;
+    }
+
+    .footer {
+        padding: 20px 20px;
+    }
+
+    .footer__soc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1920px;
+        margin: 0 auto;
+        gap: 40px !important;
+        flex-wrap: wrap;
+        /* Group 5428 */
+        max-width: 1920px;
+        min-height: 318px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .ww {
+        /* сделано вв */
+        width: 190.22px;
+        min-height: 56px;
+        left: 374px;
+        margin-top: 0px !important;
+    }
+
+    .footer__column {
+        display: flex;
+        flex-direction: column;
+        gap: 5px !important;
+        min-width: 200px;
+        /* пункты футера */
+        width: fit-content;
+        min-height: 200px;
+    }
 }
 
 .footer__column {
@@ -1701,35 +1853,29 @@ a {
     flex-direction: column;
     gap: 10px;
     min-width: 200px;
-
     /* пункты футера */
-
-
-    width: 244px;
+    width: fit-content;
     min-height: 200px;
-
-
-
 }
 
-.footer__title {
-    font-size: 20px;
+.contacts {
+    text-align: end;
+}
+
+.footer__title1 {
     color: white;
     font-weight: bold;
-    margin-bottom: 10px;
-
+    margin-bottom: 0px;
     /* Fabrika */
-
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 41px;
-
-
     color: #FFFFFF;
+}
 
-
+.footer__title2 {
+    display: none;
 }
 
 .footer__subtitle {
@@ -1739,7 +1885,7 @@ a {
     margin-bottom: 10px;
 }
 
-.footer-link1 {
+.footer__link1 {
     /* Политика конфиденциальности */
 
     font-family: 'Manrope';
@@ -1752,8 +1898,6 @@ a {
 
     color: #A4A4A4;
     text-decoration: none;
-
-
 }
 
 .footer__link {
@@ -1763,14 +1907,10 @@ a {
 
 .ww {
     /* сделано вв */
-
-
     width: 190.22px;
-    height: 56px;
+    min-height: 56px;
     left: 374px;
-    top: 204px;
-
-
+    margin-top: 50px;
 }
 
 .footer__small {
@@ -1782,9 +1922,10 @@ a {
     font-size: 12px;
     color: #A4A4A4;
     margin-top: 10px;
-
+    max-width: 180px;
+    width: fit-content;
     /* Свяжитесь с нами удобным способом! */
-
+    text-align: end !important;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
@@ -1794,23 +1935,38 @@ a {
     text-align: right;
 
     color: #A4A4A4;
+}
 
+@media(max-width:768px) {
+    .footer__note {
+        font-size: 12px;
+        color: #A4A4A4;
+        margin-top: 10px;
+        max-width: 180px;
+        width: fit-content;
+        /* Свяжитесь с нами удобным способом! */
+        text-align: start !important;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        /* or 21px */
+        text-align: right;
 
+        color: #A4A4A4;
+    }
 }
 
 .footer__socials {
     display: flex;
     gap: 10px;
     margin-top: 5px;
-
+    width: fit-content;
     /* Frame 5553 */
-
-
-    width: 124px;
+    min-width: 124px;
+    justify-content: end;
     height: 31px;
-
-
-
 }
 
 .footer__socials img {
@@ -1820,42 +1976,28 @@ a {
 
 .logocolor1 {
     /* logoColor 1 */
-
-
     width: 47px;
     height: 26px;
-
-
-
 }
 
 .footerimg {
     /* вк */
-
-
     width: 31px;
     height: 31px;
     border-radius: 5px;
-
-
 }
 
 .footer__link2 {
     color: #A4A4A4;
     text-decoration: none;
     /* Fabrika-tyumen@yandex.ru */
-
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 23px;
     /* identical to box height */
-
     color: #FFFFFF;
-
-
 }
 
 /* footer */
@@ -2249,19 +2391,33 @@ a {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
+
 }
 
 .mymodal {
     padding: 20px;
     border-radius: 10px;
     position: relative;
+    max-width: 520px;
+    width: 98vw;
+    height: fit-content;
+}
+
+.closediv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
 }
 
 .modal-close {
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
+    margin-left: auto;
+    font-size: 36px;
+    font-weight: lighter;
+    background-color: #ffffff00;
+    border: 0px !important;
+    cursor: pointer;
 }
 
 .bodymodal {
@@ -2275,18 +2431,14 @@ a {
     gap: 30px;
 
     position: relative;
-    width: 522px;
-    height: 522px;
 
     background: #FFFFFF;
     border-radius: 5px;
-
-
 }
 
 .form-wrapper {
     background: white;
-    padding: 2rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
@@ -2301,7 +2453,7 @@ a {
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
-
+    margin-bottom: 30px;
     width: 422px;
     height: fit-content;
 
@@ -2311,7 +2463,6 @@ a {
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-
 }
 
 .frame48095777text {
@@ -2363,7 +2514,8 @@ a {
     padding: 0px;
     gap: 30px;
 
-    width: 422px;
+    max-width: 422px;
+    width: 100%;
     min-height: 324px;
     height: fit-content;
 
@@ -2376,7 +2528,7 @@ a {
 }
 
 
-input {
+.in {
 
     /* Frame 975 */
 
@@ -2388,6 +2540,7 @@ input {
     gap: 10px;
 
     max-width: 422px;
+    width: 100%;
     height: fit-content;
 
 
@@ -2419,7 +2572,7 @@ input {
 
     background: #7D7D7D;
     border-radius: 5px;
-
+    padding: 0 25px;
     /* Inside auto layout */
     flex: none;
     order: 2;
@@ -2467,27 +2620,117 @@ input {
     flex: none;
     order: 1;
     flex-grow: 0;
+    margin-top: 30px;
 
 }
 
-.frame974 {
-    /* Frame 974 */
+.input-error {
+    background-color: #FFE4E4 !important;
+    border: 1px solid #F36A6A !important;
+    color: #F36A6A;
+}
 
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
+.error-message {
+    color: #F36A6A;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
 
-    padding: 0px;
-    gap: 10px;
+.checkbox-error .checkbox-text2 {
+    color: #F36A6A;
 
+}
 
+/* Контур чекбокса при ошибке */
+.checkmark2.checkmark-error {
+    border: 1px solid #F36A6A !important;
+    background-color: #f36a6a5b;
+}
 
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+/* (опционально) Цвет заливки при ошибке */
+.checkmark2.checkmark-error::before {
+    background-color: red;
+}
 
+/* Красный текст */
+.custom-checkbox2.checkbox-error .checkbox-text2 {
+    color: #F36A6A;
+}
+
+.in {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Иконка ошибки */
+.error-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #F36A6A;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.phone-icon {
+    margin-top: -48px;
+    /* подстрой под высоту поля */
+    margin-left: calc(100% - 30px);
+    position: relative;
+    z-index: 2;
+    border: 2px solid #F36A6A;
+    border-radius: 50%;
+}
+
+.username-icon {
+    margin-top: -48px;
+    /* подстрой под высоту поля */
+    margin-left: calc(100% - 30px);
+    position: relative;
+    z-index: 2;
+    border: 2px solid #F36A6A;
+    border-radius: 50%;
+}
+
+.user-icon {
+    margin-top: -48px;
+    /* подстрой под высоту поля */
+    margin-left: calc(100% - 30px);
+    position: relative;
+    z-index: 2;
+    border: 2px solid #F36A6A;
+    border-radius: 50%;
+}
+
+.password-icon {
+    margin-top: -48px;
+    /* подстрой под высоту поля */
+    margin-left: calc(100% - 30px);
+    position: relative;
+    z-index: 2;
+    border: 2px solid #F36A6A;
+    border-radius: 50%;
+}
+
+/* Красный input */
+.input-error {
+    background-color: #FFE4E4 !important;
+    border: 1px solid #F36A6A !important;
+}
+
+/* Красный placeholder */
+.input-error::placeholder {
+    color: #F36A6A;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    color: #F36A6A;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 /* modal */

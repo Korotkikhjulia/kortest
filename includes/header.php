@@ -17,15 +17,21 @@ session_start();
             <div class="nav-wrapper">
                 <div class="burger" id="burger">&#9776;</div>
                 <div class="frame5618" id="navMenu">
-                    <p class="frame5618text">Каталог</p>
-                    <p class="frame5618text">О компании</p>
-                    <p class="frame5618text">Портфолио</p>
+                    <a class="a1" href="">
+                        <p class="frame5618text">Каталог</p>
+                    </a>
+                    <a class="a1" href="">
+                        <p class="frame5618text">О компании</p>
+                    </a>
+                    <a class="a1" href="">
+                        <p class="frame5618text">Портфолио</p>
+                    </a>
                     <a class="a1" href="/blog.php">
                         <p class="frame5618text">Блог</p>
                     </a>
-                    <p class="frame5618text">Контакты</p>
-
-
+                    <a class="a1" href="">
+                        <p class="frame5618text">Контакты</p>
+                    </a>
                     <div class="frame5704">
                         <div class="group5628">
 
@@ -36,25 +42,17 @@ session_start();
                         </div>
                         <div class="user-circle1">
                             <a id="openModal"><img class="" src="/assets/images/user-circle1.jpg"></a>
-                            <?php if (isset($_SESSION['username'])): ?>
-                                <div class="myrow">
-                                    <p><?= htmlspecialchars($_SESSION['username']) ?></p>
-                                    <form action="logout.php" method="post">
-                                        <button type="submit" class="mybtn">Выйти</button>
-                                    </form>
-                                </div>
-                            <?php else: ?>
-                                <p>Войти</p>
-                            <?php endif; ?>
+
                             <!-- Модальное окно -->
-                            <div class="modal-overlay" id="modalOverlay">
-                                <div class="mymodal">
-                                    <div id="modalContent">
-                                        Загрузка...
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="mymodal">
+                    <div id="modalContent">
+                        Загрузка...
                     </div>
                 </div>
             </div>

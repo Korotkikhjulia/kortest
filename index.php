@@ -13,13 +13,11 @@ session_start();
     <script src="/assets/js/main.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/main.js') ?>"></script>
     <script src="/assets/js/search.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/search.js') ?>"></script>
     <script src="/assets/js/bootstrap.bundle.min.js?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/bootstrap.bundle.min.js') ?>"></script>
-
 </head>
 
 <body>
     <?php include 'includes/header.php'; ?>
     <main class="main">
-
         <div class="frame5705">
             <div class="frame5692">
                 <div class="carousel">
@@ -29,17 +27,29 @@ session_start();
                                 <img src='assets/images/slide1.jpg' class="carouselimg d-block w-100" alt="...">
                                 <div class="carousel-caption d-flex">
                                     <h3 class="carousel-text">Перетяжка мягкой мебели</h3>
+                                    <button class="carouselbtn btncolor">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/slide2.jpg" class="carouselimg d-block w-100" alt="...">
+                                <div class="carousel-caption d-flex">
+                                    <h3 class="carousel-text">Изготовление диванов</h3>
                                     <button class="carouselbtn">Подробнее</button>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/slide2.jpg" class="d-block w-100" alt="...">
+                                <img src="assets/images/slide3.jpg" class="carouselimg d-block w-100" alt="...">
+                                <div class="carousel-caption d-flex">
+                                    <h3 class="carousel-text">Изготовление мягких стеновых панелей</h3>
+                                    <button class="carouselbtn">Подробнее</button>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/slide3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/slide4.jpg" class="d-block w-100" alt="...">
+                                <img src="assets/images/slide4.jpg" class="carouselimg d-block w-100" alt="...">
+                                <div class="carousel-caption d-flex">
+                                    <h3 class="carousel-text">Изготовление кроватей</h3>
+                                    <button class="carouselbtn">Подробнее</button>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -56,7 +66,7 @@ session_start();
         </div>
         <div class="frame5699">
             <div class="frame56991">
-                <input type="text" id="product-search" placeholder="Поиск продуктов..." autocomplete="off" class="frame5693">
+                <input type="text" id="product-search" placeholder="Найти..." autocomplete="off" class="frame5693">
                 <div id="search-results"></div>
             </div>
             <div class="frame5695">
@@ -77,18 +87,15 @@ session_start();
                                 <p class="frame5700text1">
                                     <?= htmlspecialchars($product['subtitle']) ?><br>«<?= htmlspecialchars($product['name']) ?>»</p>
                                 <p class="frame5700text2"><?= number_format($product['price'], 0, '', ' ') ?> Р.</p>
-                                <div class="frame11">
+                                <button class="frame11 btncolor">
                                     <p class="frame11text">В корзину</p>
-
-                                </div>
-
+                                </button>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
         </div>
-
         <div class="frame5698">
             <div class="frame5697">
                 <div class="frame5447">
@@ -106,65 +113,55 @@ session_start();
                 </div>
             </div>
         </div>
-
         <div class="frame914">
-            <div class="frame984">
+            <form action="" class="frame984">
                 <div class="frame983">
                     <p class="frame983text1">Оставьте заявку</p>
                     <p class="frame983text2">Мы свяжемся с вами и расскажем подробнее обо всех видах услуг</p>
                 </div>
                 <div class="frame982">
                     <div class="frame981">
-                        <div class="frame975">
-                            <p class="frame975text">
-                                Как вас зовут?
-                            </p>
-                        </div>
-                        <div class="frame976">
-                            <p class="frame976text">
-                                +7 (_____) _____ ___ ___
-                            </p>
-                        </div>
-                        <div class="frame977">
-                            <p class="frame977text">
-                                Email
-                            </p>
-                        </div>
+                        <input class="frame975" placeholder="Как вас зовут?">
+                        </input>
+                        <input class="frame976" placeholder="+7 (_____) _____ ___ ___">
+                        </input>
+                        <input class="frame977" placeholder="Email">
+                        </input>
                     </div>
-                    <div class="frame978">
-                        <p class="frame978text">Сообщение</p>
-                    </div>
+                    <input class="frame978" placeholder="Сообщение">
+                    </input>
                     <div class="frame979">
                         <div class="frame974">
-                            <p class="frame974text">Соглашаюсь с условиями обработки персональных данных</p>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="terms" required />
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Соглашаюсь с условиями обработки персональных данных</span>
+                            </label>
                         </div>
-                        <div class="frame4">
+                        <button class="frame4 btncolor">
                             <p class="frame4text">Отправить</p>
-                        </div>
+                        </button>
                     </div>
                 </div>
-
-            </div>
-
+            </form>
         </div>
         <div class="frame5545">
             <div class="frame48095787">
                 <p class="frame48095787text1">Новости</p>
                 <p class="frame48095787text2">Все статьи ></p>
             </div>
-            <?php
-            require 'db.php';
-
-            $news = [];
-            $result = $pdo->prepare("SELECT * FROM news ORDER BY publish_date DESC LIMIT 5");
-            $result->execute();
-
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                $news[] = $row;
-            }
-            ?>
-
             <div class="frame48095786">
+                <?php
+                require 'db.php';
+
+                $news = [];
+                $result = $pdo->prepare("SELECT * FROM news ORDER BY publish_date DESC LIMIT 5");
+                $result->execute();
+
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    $news[] = $row;
+                }
+                ?>
                 <?php foreach ($news as $item): ?>
                     <div class="frame48095782">
                         <div class="maskgroup3">
